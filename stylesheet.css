@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+/* COLORS
+CREAM     {background}#EDE3CD   
+BLUE      {h2}#24367E    {body}#49515E    {box-background}{rgba}(166, 193, 242, .25)    {price}#78A2F0
+BROWN     {h1}#282521
+PINK      {stong}#C62570
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #49515e;
+    background-color: #EDE3CD;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ----------- IMAGES ------------ */
+img {
+    max-width: 100%;
+}
+
+/* -------------------------------------- HEADER ---------------------------------- */
+/* ------------------------------- NAV STYLE ---------------------------------------*/
+/* COLORS
+    BKG #24367e
+    TEXT white
+*/
+
+.nav {
+    display: flex;
+    align-items: center;
+    list-style: none; /*bullets go away*/
+    background-color: #24367e;
+    padding: .3em; 
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style nav links */
+.nav a {
+    color: white;
+    padding: 23px 26px;
+    text-decoration: none; /*removes underlines*/
+}
+
+/* push logo to the left side visually...logo should be the top item in the list */
+li.logo {
+    margin-right: auto;
+} 
+
+/* push logo to the right side visually...logo should be the bottom item in the list 
+li.logo {
+    margin-left: auto;
+}
+*/
+
+/* style link hover */
+.nav a:hover {
+    background-color: white;
+    color: #24367e;
+}
+/* ----------------------------- END NAV STYLE ------------------------------------*/
+
+
+/* ----------------------------- HERO IMAGE ---------------------------------------*/
+
+/* -------- INDEX HERO IMAGE -------------- */
+.hero_image {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/coffee_beans.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero_header {
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 50px;
+    margin: 0;
+}
+/* -------- END INDEX HERO IMAGE ----------*/
+
+
+/* -------------------------------- END HERO IMAGE --------------------------------*/
+/* ----------------------------------- END HEADER -------------------------------- */
+
+/* ------------------------------ INDEX PAGE --------------------------------------*/
+/* ----------------- MAIN ------------------------------*/
+/* ------------ BUTTON ---------------*/
+.button {
+    background-color: #24367e;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* --- END BUTTON --- */
+
+/* ------------ GRID - INDEX ---------------*/
+/* ------ CONTAINER ------- */
+#index_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+        'welcome     welcome     welcome'
+        'shop        shop        shop'
+        /* 'highlights  highlights  highlights' */
+        'fact1       fact2       fact3'
+        'about       about       about'
+        /* 'products    products    products' */
+        'product1    product2    product3'
+        'reviews     reviews     reviews'
+    ;
+    justify-content: center;
+    background-color: white;
+    margin: 0 auto;
+}
+/* ------ END CONTAINER ------ */
+
+#welcome {
+    grid-area: welcome;
+    object-fit: cover;
+    text-align: center;
+}
+
+#shop {
+    grid-area: shop;
+    object-fit: cover;
+    text-align: center;
+}
+
+/* ----- HIGHLIGHTS ----- */
+/*
+#highlights {
+    grid-area: highlights;
+    object-fit: cover;
+    text-align: center;
+}
+*/
+
+#fact1 {
+    grid-area: fact1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact2 {
+    grid-area: fact2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact3 {
+    grid-area: fact3;
+    object-fit: cover;
+    text-align: center;
+}
+/* ---- END HIGHLIGHTS ---- */
+
+#about {
+    grid-area: about;
+    object-fit: cover;
+    text-align: center;
+}
+
+/*
+#about_header {
+    font-size: x-large;
+}
+*/
+
+/* ------ PRODUCTS ------ */
+/*
+#products {
+    grid-area: products;
+    object-fit: cover;
+    text-align: center;
+}
+*/
+
+#product1 {
+    grid-area: product1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product2 {
+    grid-area: product2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product3 {
+    grid-area: product3;
+    object-fit: cover;
+    text-align: center;
+}
+/* ---- END PRODUCTS ---- */
+
+#reviews {
+    grid-area: reviews;
+    object-fit: cover;
+    text-align: center;
+}
+
+/* --- END GRID - INDEX --- */
+
+/* ------------------------------ END INDEX PAGE ----------------------------------*/
+
+
+/* ----------------------------- MENU PAGE --------------------------------------- */
+h1 {
+    color: #282521;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.3em;
+    /* font: bold 2.2em Times, serif; */
+    text-shadow: .05em .05em .15em rgb(62, 53, 54);
+}
+
+h2 {
+    font: bold 1.2em Times, serif;
+    color: #24367e;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+strong {
+    font: bolder;
+    color: #c62570;
+}
+
+.price {
+    font: bolder;
+    color: #78A2F0;
+}
+
+/* descendant selector example: 
+        dl em {}
+    Only affects the <em> tags in the <dl> lists.
+*/
+
+#drinks, #treats, #healthy {
+    border: 2px solid;
+    background-color: rgba(166, 193, 242, .25);
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+/* --------------------------- END MENU PAGE -------------------------------------- */
